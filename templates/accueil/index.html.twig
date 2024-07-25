@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil - Carette Axel
+{% endblock %}
+
+{% block body %}
+	<script>
+		AOS.init();
+	</script>
+
+	<div class="row">
+		<div class="col-md-10 offset-md-1">
+			<div class="row padding-to" style="padding-top: 50px;">
+				<div class="col-md-5 offset-md-1 mb-3">
+					<div class="card-flip eveiller">
+						<div class="card-face card-front d-flex flex-column justify-content-center align-items-center" data-aos="flip-left">
+							<h2 class="card-title text-center">Qui-suis-je ?</h2>
+						</div>
+						<div class="card-face card-back">
+							<p>Je suis un créateur de site internet formé sur symfony et bootstrap</p>
+							<a href="{{path('app_qui_suis_je')}}" class="btn btn-warning">Pour en apprendre plus</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5 offset-md-1 mb-3">
+					<div class="card-flip booster">
+						<div class="card-face card-front d-flex flex-column justify-content-center align-items-center" data-aos="flip-left">
+							<h2 class="card-title text-center">Me contacter</h2>
+						</div>
+						<div class="card-face card-back">
+							<p>Pour demander un devis ou si vous avez des questions :</p>
+							<a href="{{path('app_me_contacter')}}" class="btn btn-warning">Me contacter</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-12 d-flex justify-content-center" style="margin-top: 20px;">
+		<img src="{{ asset('asset/img/logoAxel.png') }}" alt="Logo Axel">
+	</div>
+
+	<div class="container-fluid full-height d-flex justify-content-center align-items-center">
+
+		<div class="md-4">
+			<div class="card-flip inspirer">
+				<div class="card-face card-front d-flex flex-column justify-content-center align-items-center" data-aos="flip-left">
+					<h2 class="card-title text-center">Mes services</h2>
+				</div>
+				<div class="card-face card-back">
+					<p>Aussi bien un site vitrine comme un site e-commerce</p>
+					<a href="{{path('app_mes_services')}}" class="btn btn-warning">Mes services</a>
+				</div>
+			</div>
+		</div>
+	</div>
+  </div>
+ </div>
+</div>{% endblock %}

@@ -1,3 +1,101 @@
-body {
-    background-color: skyblue;
+* {
+    margin: 0;
+    padding: 0;
 }
+.itim-regular {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.navbar {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    background-color: #e2c8c8 !important;
+}
+.shadow-navbar {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+h1, h2, h5, p {
+  font-family: "Itim", cursive;
+}
+
+footer {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+    justify-content: space-evenly;
+}
+.navbar-nav .nav-item {
+    margin-right: 150px;
+  }
+  .row
+  {
+    --bs-gutter-x: 0rem;
+  }
+  .navbar-nav .nav-item:last-child {
+    margin-right: 0; 
+  }
+
+  .card-flip {
+    width: 500px;
+    height: 350px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.9s;
+    cursor: pointer;
+ 
+  }
+  .card-flip:hover {
+    transform: rotateY(180deg);
+  }
+  .card-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 50px;
+  }
+  .card-back {
+    transform: rotateY(180deg);
+  }
+  .eveiller p 
+  {
+    justify-content: center;
+    text-align: center;
+  }
+  .eveiller .card-face.card-front {
+    background-color: #043e46;
+    color: white;
+  }
+  .eveiller .card-face.card-back {
+    background-color: #043e46;
+    color: white;
+  }
+  .booster .card-face.card-front {
+    background-color: #5e826a;
+    color: white;
+  }
+  .booster .card-face.card-back {
+    background-color: #5e826a;
+    color: white;
+  }
+  .inspirer
+  {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .inspirer .card-face.card-front {
+    background-color: #823226;
+    color:white;
+  }
+  .inspirer .card-face.card-back {
+    background-color: #823226;
+    color: white;
+  }
+  

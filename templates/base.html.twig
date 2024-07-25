@@ -4,14 +4,68 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+        <link rel="stylesheet" href="{{ asset('build/vendor.css') }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+        <script src="{{ asset('build/vendor.js') }}" defer></script>
         {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
         {% endblock %}
 
         {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        
+  <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-navbar" >
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{path('app_accueil')}}">
+    <img src="{{ asset('asset/img/logoAxel.png') }}" alt="Logo Axel" width="300">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{path('app_qui_suis_je')}}">Qui-suis-je ?</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{path('app_me_contacter')}}">Me contacter</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{path('app_mes_services')}}" >Mes services</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+      {% block body %}  
+        {% endblock %}
     </body>
+      <footer class="bg-dark text-white pt-4">
+    <div class="container">
+      <div class="row">
+ 
+        
+        <div class="col-lg-4">
+          <h5 class="text-uppercase">Liens utiles</h5>
+          <ul class="list-unstyled mb-0">
+            <li><a href="#!" class="text-white">Accueil</a></li>
+            <li><a href="#!" class="text-white">Contact</a></li>
+          
+          </ul>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+     <p class="text-white">© 2024 Copyright: Axel Carette </p>
+    </div>
+  </footer>
 </html>
